@@ -9,35 +9,189 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Encounter Generator</title>
 </head>
 
 <body>
 
-    <header>
-        <div>
-            <h1>D&D 5E ENCOUNTER GENERATOR</h1>
-            <h2>IF WE'RE GONNA FIGHT, LET'S DO IT RIGHT</h2>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <h1>D&D 5E ENCOUNTER GENERATOR</h1>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div>
-        <h2>Discover & Review</h2>
-        <h3>Our Campsites</h3>
-        <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <h3>WHERE YOU FIGHT IS AS IMPORTANT AS HOW YOU FIGHT</h3>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+            <p>Scene</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="radio" id="indoor" name="sceneA" value="indoor" /> 
+                <label for="indoor">Indoor</label>
+                <input type="radio" id="outdoor" name="sceneB" value="outdoor" />
+                <label for="outdoor">Outdoor</label>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <p>Climate Options</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <label for="weather">Weather:</label>
+            <select id="weather" name="weather"> 
+                <option value="random">Random</option>
+                <option value="calm">Calm</option>
+                <option value="windy">Windy</option>
+                <option value="precipitation">Precipitation</option>
+                <option value="extreme">Extreme</option>
+            </select>
+            </div>
+            <div class="col">
+            <label for="temperature">Temperature:</label>
+            <select id="temperature" name="temperature">
+                <option value="random">Random</option> 
+                <option value="mild">Mild</option>
+                <option value="heat">Extreme Heat</option>
+                <option value="cold">Extreme Cold</option>
+            </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            <p>Terrain</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <label for="terrainType">Type:</label>
+            <select id="terrainType" name="terrainType">
+                <option value="random">Random</option>
+                <option value="arctic">Arctic</option>
+                <option value="coast">Coast</option>
+                <option value="desert">Desert</option>
+                <option value="forest">Forest</option>
+                <option value="grassland">Grassland</option>
+                <option value="mountain">Mountain</option>
+                <option value="riverside">Riverside</option>
+                <option value="swamp">Swamp</option>
+                <option value="underdark">Underdark</option>
+                <option value="wasteland">Wasteland</option>
+            </select>
+            </div>
+            <div class="col">
+            <label for="terrainDensity">Elevation Density:</label>
+            <select id="terrainDensity" name="terrainDensity"> 
+                <option value="low">Low (flat)</option>
+                <option value="high">High (uneven)</option>
+            </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="radio" id="onroad" name="onroad" value="onroad" /> 
+                <label for="onroad">On-road</label>
+                <input type="radio" id="offroad" name="offroad" value="offroad" />
+                <label for="offroad">Off-road</label>
+            </div>
+            <div class="col">
+                <input type="radio" id="nocover" name="nocover" value="nocover" />
+                <label for="nocover">No Cover</label>
+                <input type="radio" id="light" name="light" value="light" /> 
+                <label for="light">Light Cover</label>
+                <input type="radio" id="heavy" name="heavy" value="heavy" />
+                <label for="heavy">Heavy Cover</label>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label>Advanced Options (check to include):</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" name="traveler" id="travelerCheckbox" value="traveler" />
+                <label for="travelerCheckbox">Travelers</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="homestead" id="homesteadCheckbox" value="homestead" />
+                <label for="homesteadCheckbox">Homesteads</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="ruins" id="ruinsCheckbox" value="ruins" />
+                <label for="ruinsCheckbox">Ruins</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="battlefield" id="battlefieldCheckbox" value="battlefield" />
+                <label for="battlefieldCheckbox">Battlefields</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" name="wilddead" id="wilddeadCheckbox" value="wilddead" />
+                <label for="wilddeadCheckbox">Wild/Dead Magic</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="army" id="armyCheckbox" value="army" />
+                <label for="armyCheckbox">Armies</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="foraging" id="foragingCheckbox" value="foraging" />
+                <label for="foragingCheckbox">Foraging</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="hunting" id="huntingCheckbox" value="hunting" />
+                <label for="huntingCheckbox">Hunting</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" name="disaster" id="disasterCheckbox" value="Disaster" />
+                <label for="DisasterCheckbox">Disasters</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="luck" id="luckCheckbox" value="luck" />
+                <label for="luckCheckbox">Strokes Of Luck</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="sites" id="sitesCheckbox" value="sites" />
+                <label for="sitesCheckbox">Sites & Sights</label>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="everything" id="everythingCheckbox" value="everything" />
+                <label for="everythingCheckbox">Include Everything</label>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <div>
-            <h5>Social</h5>
-            <a href="http://instagram.com/">Instagram</a>
-            <a href="http://facebook.com/">Facebook</a>
-            <a href="http://twitter.com/">Twitter</a>
-            <a href="http://youtube.com/">YouTube</a>
-        </div>
-        <div>
-            Tel: 555-555-5555<br />
-            Email: weaintfriends@yet.com
+        <div class="container">
+            <div class="row align-items-center">
+            <p>Tel: 555-555-5555<br>Email: weaintfriends@yet.com</p>
+            </div>
         </div>
     </footer>
 
