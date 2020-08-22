@@ -35,6 +35,11 @@
             </div>
         </div>
         <br>
+        <div class="row">
+            <div class="col">
+            <img src="\images\projectgrid.gif" class="rounded mx-auto d-block" alt="This is an animated image of a battlegrid." />
+            </div>
+        </div>
         <br>
         <div class="row">
             <div class="col">
@@ -43,9 +48,9 @@
         </div>
         <div class="row">
             <div class="col">
-                <input type="radio" id="indoor" name="sceneA" value="indoor" /> 
+                <input type="radio" id="indoor" name="scene" value="indoor" /> 
                 <label for="indoor">Indoor</label>
-                <input type="radio" id="outdoor" name="sceneB" value="outdoor" />
+                <input type="radio" id="outdoor" name="scene" value="outdoor" />
                 <label for="outdoor">Outdoor</label>
             </div>
         </div>
@@ -64,8 +69,8 @@
                 <option value="random">Random</option>
                 <option value="calm">Calm</option>
                 <option value="windy">Windy</option>
-                <option value="precipitation">Precipitation</option>
-                <option value="extreme">Extreme</option>
+                <option value="rain">Rain</option>
+                <option value="snow">Snow</option>
             </select>
             </div>
             <div class="col">
@@ -76,6 +81,12 @@
                 <option value="heat">Extreme Heat</option>
                 <option value="cold">Extreme Cold</option>
             </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" name="ruins" id="ruinsCheckbox" value="ruins" />
+                <label for="ruinsCheckbox">Allow Storms</label>
             </div>
         </div>
         <br>
@@ -111,17 +122,17 @@
         </div>
         <div class="row">
             <div class="col">
-                <input type="radio" id="onroad" name="onroad" value="onroad" /> 
+                <input type="radio" id="onroad" name="road" value="onroad" /> 
                 <label for="onroad">On-road</label>
-                <input type="radio" id="offroad" name="offroad" value="offroad" />
+                <input type="radio" id="offroad" name="road" value="offroad" />
                 <label for="offroad">Off-road</label>
             </div>
             <div class="col">
-                <input type="radio" id="nocover" name="nocover" value="nocover" />
+                <input type="radio" id="nocover" name="cover" value="nocover" />
                 <label for="nocover">No Cover</label>
-                <input type="radio" id="light" name="light" value="light" /> 
+                <input type="radio" id="light" name="cover" value="light" /> 
                 <label for="light">Light Cover</label>
-                <input type="radio" id="heavy" name="heavy" value="heavy" />
+                <input type="radio" id="heavy" name="cover" value="heavy" />
                 <label for="heavy">Heavy Cover</label>
             </div>
         </div>
